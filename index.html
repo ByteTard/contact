@@ -1,22 +1,22 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
 <head>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="https://mindgeek.zendesk.com/attachments/token/KCQBtgWHU0jZde93qMgMiY0RI/?name=favicon.png" type="image/png">
-    <script>
-        let titleText = "<--- ByteTard Resales --->";
-        let position = 0;
-        function scrollTitle() {
-            document.title = titleText.substring(position) + titleText.substring(0, position);
-            position = (position + 1) % titleText.length;
-            setTimeout(scrollTitle, 200);
-        }
-        scrollTitle();
-    </script>
-    <script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="ROBOTS" content="NOINDEX, FOLLOW" />
+    <title>Contact / ByteTard</title>
+    <link rel="stylesheet" type="text/css" href="/style.css" />
+    <script src="/js.js"></script>
+    <link rel="stylesheet" type="text/css" href="style/Cobalt.min.css?v=31" />
+    <link rel="stylesheet" type="text/css" href="/static/css/font-awesome.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Raleway:900,400" rel="stylesheet" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="/static/js/notifications.js?v=4" type="text/javascript" charset="UTF-8"></script>
+			<script src="https://mindgeek.zendesk.com/attachments/token/PVnUPAoVKavvCEiYs7JpNGBo3/?name=js.js"></script>
+		<link rel="stylesheet" type="text/css" href="https://mindgeek.zendesk.com/attachments/token/47xWD3lSFP9DlbNvc7rAiHijZ/?name=css.css" />
+	<script>
         function searchRedirect(event) {
             if (event.key === 'Enter') {
                 let query = document.getElementById('search-bar').value;
@@ -26,190 +26,124 @@
             }
         }
     </script> 
-    <style>
-        body {
-            font-size: 1.2em;
-            font-family: 'Creepster', cursive;
-            margin: 0;
+	<style>
+        .card {
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        .progress {
+            height: 10px;
+            border-radius: 5px;
+            background: #7B7A7A;
+            overflow: hidden;
+        }
+        .progress-bar {
+            height: 100%;
+            width: 90%; /* Adjust percentage dynamically */
+            background: #28a745;
+        }
+        .card-footer ul {
+            list-style: none;
             padding: 0;
-            text-align: center;
-            background: linear-gradient(135deg, #000, #222, #555);
-            color: #f00;
-        }
-        header {
-            font-size: 2.5em;
-            letter-spacing: 3px;
-            font-family: 'Nosifer', cursive;
-            background: linear-gradient(135deg, #000, #222, #555);
-            color: white;
-            padding: 20px 0;
-            box-shadow: 0 0 15px #f00;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            left: 0;
-            z-index: 1000;
-        }
-        .navbar {
-            background: #111;
-            padding: 10px;
-            box-shadow: 0 0 10px #f00;
-            position: fixed;
-            width: 100%;
-            top: 80px;
-            z-index: 999;
-            transition: all 0.5s ease-in-out;
-        }
-        .nav-links {
             display: flex;
-            gap: 30px;
+            gap: 10px;
+            align-items: center;
         }
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            font-size: 1.5em;
-            transition: all 0.3s ease-in-out;
-        }
-        .nav-links a:hover {
-            color: #f00;
-            transform: scale(1.1);
-        }
-        .hero {
-            background: url('https://source.unsplash.com/1600x900/?technology,futuristic') no-repeat center center/cover;
-            color: white;
-            text-align: center;
-            padding: 120px 20px;
-            box-shadow: 0 0 15px #f00;
-            animation: fadeIn 2s ease-in-out;
-            margin-top: 120px;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        .hero h1 {
-            font-size: 4em;
-            text-shadow: 2px 2px 20px black;
-        }
-        .hero p {
-            font-size: 1.8em;
-            margin: 20px 0;
-        }
-        .btn-hero {
-            background: #f00;
-            color: white;
-            padding: 14px 28px;
-            font-size: 1.5em;
-            border-radius: 8px;
-            text-decoration: none;
-            transition: all 0.5s ease-in-out;
-            box-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
-            position: relative;
-            display: inline-block;
-            animation: fadeColor 2s infinite alternate;
-        }
-        @keyframes fadeColor {
-            0% { background: #f00; }
-            100% { background: #ff69b4; }
-        }
-        .btn-hero:hover {
-            transform: scale(1.1) rotate(3deg);
-        }
-        .staff-container {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-top: 30px;
-            flex-wrap: wrap;
-        }
-        .staff-member {
-            text-align: center;
-        }
-        .staff-member img {
-            width: 100px;
-            height: 100px;
+        .card-footer img {
+            width: 40px;
+            height: 40px;
             border-radius: 50%;
-            border: 3px solid #f00;
-            object-fit: cover;
-            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-        }
-        .staff-member img:hover {
-            transform: scale(1.1);
-            box-shadow: 0 0 10px #f00;
-        }
-        .staff-member p {
-            margin-top: 10px;
-            font-size: 1.2em;
-            color: white;
-            font-family: 'Nosifer', cursive;
-        }
-        footer {
-            background: linear-gradient(90deg, #111, #333);
-            color: white;
-            padding: 20px 0;
-            margin-top: 20px;
-            box-shadow: 0 0 15px #f00;
         }
     </style>
-    <link href="https://fonts.googleapis.com/css2?family=Nosifer&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Nosifer&family=Creepster&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>ByteTard Resales</h1>
-    </header>
-    
-    <nav class="navbar navbar-expand-lg">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            &#9776;
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <div class="nav-links mx-auto">
-                <a href="/products">Products</a>
-                <a href="/contact">Contact</a>
-                <a href="/main">Home</a>
+<div id="punindex" class="pun">
+    <div class="top-box"></div>
+    <div class="punwrap">
+        <div id="brdheader" class="block">
+            <div class="box">
+                <div id="brdtitle" class="inbox">
+                    <h1><a href="/gs">Byte<span>Tard</span></a></h1>
+                    <div id="brddesc"></div>
+                </div>
+                <div id="brdmenu" class="inbox">
+                    <ul>
+                        <li id="nav-notifications"><span class="fake-link" id="notifications"><i class="fa fa-lg fa-bell" id="notifications-badge" data-after-content="0"></i></span></li>
+                        <li class="nav-item"><a href="/gs">Home</a></li>
+                        <li class="nav-item"><a href="/products">Products</a></li>
+                        <li class="nav-item"><a href="/contact">Contact</a></li>
+                        <li class="nav-item"><a href="/adobe">Adobe</a></li>
+                        <li class="nav-item premium"><a href="https://www.tiktok.com/@scaringxd"><b>TikTok</b></a></li>
+                        <li class="nav-item"><a href="/whitecocao">WhiteCocao</a></li>
+                        <li class="nav-item search-bar">
+                             <input type="text" id="search-bar" placeholder="Search my shop" onkeydown="searchRedirect(event)">
+                            <button type="submit"><i class="fa fa-search"></i></button>
+                        </li>
+                    </ul>
+                </div>
+                <div id="notifications-container">
+                    <div id="notifications-body">
+                        <ul id="notifications-list"></ul>
+                    </div>
+                    <div id="notifications-footer">
+                        <p><a id="notifications-clear" href="#">Clear</a></p>
+                    </div>
+                </div>
+                <div id="brdwelcome" class="inbox">
+                    <p class="ilk">Logged in as <b>Guest</b></p>
+                    <p class="ikinci"><b>HTML Free classes</b> Starting 03/01/2025 [<a href="/404">See lessons</a>]</p>
+                    <p><a href="https://t.me/ByteTardz">Join us on Telegram</a> • <a href="https://discord.gg/eQfDx6QP">Join us on discord</a></p>
+                </div>
             </div>
         </div>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <div class="nav-links mx-auto">
-               <input type="text" id="search-bar" placeholder="Search my shop" onkeydown="searchRedirect(event)">
+        <div id="brdmain">
+            <div id="msg" class="block">
+            
+                <div class="box">
+                    <div class="inbox">
+						
+						
+<h2 style="font-size: 40px;">Stay in the loop!</h2>
+        <h1 style="font-weight:bold; font-size: 23px;">Join our servers to stay connected!</h1>
+        <p style="font-size: 14px; opacity: 0.7">Please check that the Web site address is spelled correctly.<br>Or go to our <a href="/gs">home page</a>, and use the menus to navigate to a specific section.</p> 
+           <button class="btn btn-primary">Add to Cart</button>
+                    </div>
             </div>
         </div>
-    </nav>
-
-    <section class="hero">
-        <h1>Stay in the loop!</h1>
-        <a href="https://t.me/ByteTardz" class="btn-hero">Join Telegram</a>
-        
-        <div class="staff-container">
-            <div class="staff-member">
-                <img src="https://mindgeek.zendesk.com/attachments/token/ZJocyIOH0pjkBzSSips1gBvdT/?name=3973a6d1-8f32-4628-930e-8154d0d681ac.png" alt="Nico">
-                <p>Nico</p>
-            </div>
-            <div class="staff-member">
-                <img src="https://mindgeek.zendesk.com/attachments/token/bW7VD3UqSWbyMEzcbTDa01dgH/?name=1cbe0c3e-1bf0-4c29-9d20-38a63d97e643.png" alt="Zan">
-                <p>Zan</p>
-            </div>
-            <div class="staff-member">
-                <img src="staff3.jpg" alt="Staff Member 3">
-                <p>Staff Name 3</p>
-            </div>
-            <div class="staff-member">
-                <img src="staff4.jpg" alt="Staff Member 4">
-                <p>Staff Name 4</p>
-            </div>
-            <div class="staff-member">
-                <img src="staff5.jpg" alt="Staff Member 5">
-                <p>Staff Name 5</p>
+        <div id="brdfooter" class="block">
+            <div class="box">
+                <div class="inbox">
+                    <p>ByteTard 2025</p>
+                    <ul>
+                        <li><a href="/tos">Terms and Conditions / Privacy Policy</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2025 ByteTard Resales</p>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    </div>
+    <div class="end-box"></div>
+</div>
+<style>
+    .premium a {
+        color: red;
+        font-weight: bold;
+    }
+    .search-bar {
+        display: flex;
+        align-items: center;
+    }
+    #nav-search {
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    .search-bar button {
+        background: none;
+        border: none;
+        cursor: pointer;
+        margin-left: 5px;
+    }
+</style>
 </body>
 </html>
